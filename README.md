@@ -9,10 +9,25 @@ If your catkin workspace is named as "catkin_ws" under your home directory,
 
 ```
 cd ~/catkin_ws/src
-git clone 
-
+git clone https://github.com/kyuhyong/ros_tutorial.git
+cd ..
+catkin_make
+```
+Once catkin_make is done for the first time, make sure to source setup.bash under /devel directory.
+```
+source ~/catkin_ws/devel/setup.bash
 ```
 
 ## Execute nodes
 
-execute node by entering 
+Start run ros_master and then open two terminals.
+Entering below command to terminal will start publish a string message as 'msg_tx'
+
+```
+rosrun ros_tutorials message_publisher.py
+```
+
+To subscribe this message run 
+```
+rosrun ros_tutorials message_subscriber.py
+```
