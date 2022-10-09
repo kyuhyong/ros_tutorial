@@ -1,0 +1,6 @@
+<launch>
+  <node name="message_publisher" pkg="ros_tutorials" type="message_publisher.py">
+  </node>
+  <node name="message_subscriber" pkg="ros_tutorials" type="message_subscriber.py">
+  </node>
+</launch>
