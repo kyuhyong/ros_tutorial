@@ -10,6 +10,8 @@ project(ros_tutorials)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  move_base_msgs
+  geometry_msgs
 )
 
 ################################################################################
@@ -69,6 +71,7 @@ catkin_package(
 catkin_install_python(PROGRAMS
   nodes/message_publisher.py
   nodes/message_subscriber.py
+  nodes/move_action_client.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 install(DIRECTORY launch
