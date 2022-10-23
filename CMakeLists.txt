@@ -72,6 +72,7 @@ catkin_install_python(PROGRAMS
   nodes/message_publisher.py
   nodes/message_subscriber.py
   nodes/move_action_client.py
+  nodes/nav_commander.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 install(DIRECTORY launch
