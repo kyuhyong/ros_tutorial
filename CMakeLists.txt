@@ -2,7 +2,7 @@
 # Set minimum required version of cmake, project name and compile options
 ################################################################################
 cmake_minimum_required(VERSION 3.0.2)
-project(ros_tutorials)
+project(image_capture)
 
 ################################################################################
 # Find catkin packages and libraries for catkin and system dependencies
@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   move_base_msgs
   geometry_msgs
+  sensor_msgs
+  cv_bridge
 )
 
 ################################################################################
@@ -69,10 +71,10 @@ catkin_package(
 #############
 
 catkin_install_python(PROGRAMS
-  nodes/message_publisher.py
-  nodes/message_subscriber.py
-  nodes/move_action_client.py
-  nodes/nav_commander.py
+  nodes/image_capture_node.py
+#  nodes/message_subscriber.py
+#  nodes/move_action_client.py
+#  nodes/nav_commander.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 install(DIRECTORY launch
