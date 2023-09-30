@@ -6,6 +6,4 @@
     <param name="pixel_format" value="yuyv" />
     <param name="camera_frame_id" value="usb_cam" />
   </node>
-  <!--<node name="image_capture" pkg="image_capture" type="image_capture_node.py" output="screen">
-  </node>-->
 </launch>

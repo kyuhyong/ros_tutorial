@@ -1,0 +1,7 @@
+<launch>  
+  <node name="image_capture" pkg="image_capture" type="image_capture_node.py" output="screen">
+    <param name="file_name" value="my_image"/>
+    <param name="image_path" value="/usb_cam/image_raw"/>
+    <param name="image_count_from" value="0"/>
+  </node>
+</launch>
