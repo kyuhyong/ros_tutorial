@@ -71,7 +71,7 @@ class ImageCaptureNode:
     def main(self):
         #rospy.spin()
         br = CvBridge()
-        save_count = 0
+        save_count = self.image_count
         while not rospy.is_shutdown():
             key = self.getKey()
             if key == 'c':
