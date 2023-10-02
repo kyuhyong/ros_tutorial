@@ -37,26 +37,34 @@ Start run ros_master and then open two terminals.
 
 ### Launch camera node
 
-Plug in your usb camera to the laptop or PC then check if the camera is detected under /dev/video#
-Modify parameters in start_camera.launch per video path.
+- Plug in your usb camera to the laptop or PC then check if the camera is detected under /dev/video#
 
-```bash
-roslaunch image_capture start_camera.launch
-```
+- Check supporting video format by entering
+
+  ```bash
+   v4l2-ctl --device=0 --list-formats-ext
+   ```
+
+- Modify parameters in start_camera.launch per video path.
+- Launch start_camera.launch
+  
+  ```bash
+  roslaunch image_capture start_camera.launch
+  ```
 
 ### Launch image_capture node
 
-Modify start_capture.launch file for your choice
+- Modify start_capture.launch file for your choice
 
-- **file_name** : Captured image will be saved to ~/image_capture/<file_name>/<file_name>_count.jpg
-- **image_path** : Image path to subscribe message from usb camera
-- **image_count_from** : Starting number for <file_name>_[count].jpg
+  - **file_name** : Captured image will be saved to ~/image_capture/<file_name>/<file_name>_count.jpg
+  - **image_path** : Image path to subscribe message from usb camera
+  - **image_count_from** : Starting number for <file_name>_[count].jpg
 
-then enter below command
+- then enter below command
 
-```bash
-roslaunch image_capture start_capture.launch
-```
+  ```bash
+  roslaunch image_capture start_capture.launch
+  ```
 
 ### Capture Image
 
